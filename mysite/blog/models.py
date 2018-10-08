@@ -18,15 +18,15 @@ class Post(models.Model):
         return self.title
 
 
-class Usuarios(models.Model):
-    usuario = models.CharField(max_length=20)
+class Registro(models.Model):
+    nombreuser = models.CharField(max_length=20)
 
     def publish(self):
         
         self.save()
 
     def __str__(self):
-        return self.usuario
+        return self.nombreuser
 
 
     

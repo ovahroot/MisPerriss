@@ -19,7 +19,7 @@ from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^Usuarios/', admin.site.urls),
+    
     url(r'', include('blog.urls')),
     url(r'^Registro/$',views.Registro),
     url(r'^$',views.home)

@@ -3,12 +3,14 @@ from django.utils import timezone
 from .models import Post 
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
+from .models import Registro
 # Create your views here.
 
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/Main.html', {'posts': posts})
+
 
 
 def home(request):
@@ -25,3 +27,9 @@ def Registro(request):
     else:
         form = UserCreationForm()
     return render(request,'blog/Registro.html',{'form':form})
+
+
+
+
+
+
